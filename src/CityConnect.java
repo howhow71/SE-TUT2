@@ -88,6 +88,7 @@ public class CityConnect {
 	 */
 	private static final String COMMAND_ADD_ROUTE = "addroute";
 	private static final String COMMAND_GET_DISTANCE = "getdistance";
+	private static final String COMMAND_EXIT = "exit";
 	/*
 	 * This variable is declared for the whole class (instead of declaring it
 	 * inside the readUserCommand() method to facilitate automated testing using
@@ -179,7 +180,7 @@ public class CityConnect {
 			return COMMAND_TYPE.ADD_ROUTE;
 		} else if (commandTypeString.equalsIgnoreCase(COMMAND_GET_DISTANCE)) {
 			return COMMAND_TYPE.GET_DISTANCE;
-		} else if (commandTypeString.equalsIgnoreCase("exit")) {
+		} else if (commandTypeString.equalsIgnoreCase(COMMAND_EXIT)) {
 		 	return COMMAND_TYPE.EXIT;
 		} else {
 			return COMMAND_TYPE.INVALID;
