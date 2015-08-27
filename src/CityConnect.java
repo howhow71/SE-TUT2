@@ -82,6 +82,7 @@ public class CityConnect {
 	private static final int STORAGE_POSITION_END_LOCATION = 1;
 	private static final int STORAGE_POSITION_DISTANCE = 2;
 	private static final String NULL_ENDPOINTS = "Route end points cannot be null";
+	private static final String ASK_FOR_INPUT = "Enter command:";
 
 	/*
 	 * This variable is declared for the whole class (instead of declaring it
@@ -101,7 +102,7 @@ public class CityConnect {
 	public static void main(String[] args) {
 		showToUser(WELCOME_MESSAGE);
 		while (true) {
-			System.out.print("Enter command:");
+			System.out.print(ASK_FOR_INPUT);
 			String command = scanner.nextLine();
 			String userCommand = command;
 			String feedback = executeCommand(userCommand);
