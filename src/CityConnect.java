@@ -83,7 +83,10 @@ public class CityConnect {
 	private static final int STORAGE_POSITION_DISTANCE = 2;
 	private static final String NULL_ENDPOINTS = "Route end points cannot be null";
 	private static final String ASK_FOR_INPUT = "Enter command:";
-
+	
+	/*	Types of Commands
+	 */
+	private static final String COMMAND_ADD_ROUTE = "addroute";
 	/*
 	 * This variable is declared for the whole class (instead of declaring it
 	 * inside the readUserCommand() method to facilitate automated testing using
@@ -171,7 +174,7 @@ public class CityConnect {
 		if (commandTypeString == null)
 			throw new Error("command type string cannot be null!");
 
-		if (commandTypeString.equalsIgnoreCase("addroute")) {
+		if (commandTypeString.equalsIgnoreCase(COMMAND_ADD_ROUTE)) {
 			return COMMAND_TYPE.ADD_ROUTE;
 		} else if (commandTypeString.equalsIgnoreCase("getdistance")) {
 			return COMMAND_TYPE.GET_DISTANCE;
