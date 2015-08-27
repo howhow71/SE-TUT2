@@ -139,7 +139,8 @@ public class CityConnect {
 
 		switch (commandType) {
 		case ADD_ROUTE:
-			return addRoute(userCommand);
+			String newRoute = addRoute(userCommand);
+			return newRoute;
 		case GET_DISTANCE:
 			return getDistance(userCommand);
 		case INVALID:
