@@ -87,6 +87,7 @@ public class CityConnect {
 	/*	Types of Commands
 	 */
 	private static final String COMMAND_ADD_ROUTE = "addroute";
+	private static final String COMMAND_GET_DISTANCE = "getdistance";
 	/*
 	 * This variable is declared for the whole class (instead of declaring it
 	 * inside the readUserCommand() method to facilitate automated testing using
@@ -176,7 +177,7 @@ public class CityConnect {
 
 		if (commandTypeString.equalsIgnoreCase(COMMAND_ADD_ROUTE)) {
 			return COMMAND_TYPE.ADD_ROUTE;
-		} else if (commandTypeString.equalsIgnoreCase("getdistance")) {
+		} else if (commandTypeString.equalsIgnoreCase(COMMAND_GET_DISTANCE)) {
 			return COMMAND_TYPE.GET_DISTANCE;
 		} else if (commandTypeString.equalsIgnoreCase("exit")) {
 		 	return COMMAND_TYPE.EXIT;
