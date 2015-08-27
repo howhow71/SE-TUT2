@@ -90,6 +90,7 @@ public class CityConnect {
 	private static final String COMMAND_ADD_ROUTE = "addroute";
 	private static final String COMMAND_GET_DISTANCE = "getdistance";
 	private static final String COMMAND_EXIT = "exit";
+	private static final String ERR_UNRECOGNIZED = "Unrecognized command type";
 	/*
 	 * This variable is declared for the whole class (instead of declaring it
 	 * inside the readUserCommand() method to facilitate automated testing using
@@ -147,7 +148,7 @@ public class CityConnect {
 			System.exit(0);
 		default:
 			//throw an error if the command is not recognized
-			throw new Error("Unrecognized command type");
+			throw new Error(ERR_UNRECOGNIZED);
 		}
 		/*
 		 * ==============NOTE TO STUDENTS======================================
