@@ -73,6 +73,7 @@ public class CityConnect {
 
 	// This array will be used to store the routes
 	private static String[][] route = new String[10][3];
+	private static final String WHITESPACE = "\\s+";
 
 	/*
 	 * These are the locations at which various components of the route will be
@@ -340,7 +341,7 @@ public class CityConnect {
 	}
 
 	private static String getFirstWord(String userCommand) {
-		String commandTypeString = userCommand.trim().split("\\s+")[0];
+		String commandTypeString = userCommand.trim().split(WHITESPACE)[0];
 		return commandTypeString;
 	}
 
